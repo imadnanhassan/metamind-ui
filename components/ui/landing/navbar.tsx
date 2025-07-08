@@ -16,13 +16,14 @@ export function Navbar() {
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const navItems = [
-    { name: "Products", hasMegaMenu: true },
-    { name: "Solutions", hasMegaMenu: true },
-    { name: "Enterprise", hasMegaMenu: false },
-    { name: "Government", hasMegaMenu: false },
-    { name: "Customers", hasMegaMenu: false },
-    { name: "Resources", hasMegaMenu: true },
+    { name: "Products", hasMegaMenu: true }, // AI SEO tools
+    { name: "Solutions", hasMegaMenu: true }, // Use-case based
+    { name: "Enterprise", hasMegaMenu: false }, // B2B custom deals
+    { name: "Customers", hasMegaMenu: false }, // Case studies, logos
+    { name: "Resources", hasMegaMenu: true }, // Blog, docs, guides
+    { name: "Pricing", hasMegaMenu: false }, // Pricing plans
   ];
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -115,7 +116,7 @@ export function Navbar() {
         animate={{ y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
+        <div className="max-w-[1400px] mx-auto flex items-center justify-between">
           {/* Logo */}
           <motion.div
             className="text-2xl font-bold text-white cursor-pointer"

@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
+import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
 
 interface MegaMenuProps {
@@ -16,77 +17,43 @@ export function MegaMenu({ type, onItemClick }: MegaMenuProps) {
     Products: {
       sections: [
         {
-          title: "AI Development",
+          title: "AI SEO Tools",
           items: [
             {
-              name: "Data Labeling",
-              href: "/products/data-labeling",
-              description: "High-quality data annotation services",
+              name: "AI Content Writer",
+              href: "/products/ai-content-writer",
+              description:
+                "Generate blogs, website copy, and product descriptions",
             },
             {
-              name: "Model Training",
-              href: "/products/model-training",
-              description: "Advanced ML model training platform",
+              name: "Meta Tag Generator",
+              href: "/products/meta-tag-generator",
+              description: "Create optimized meta titles and descriptions",
             },
             {
-              name: "Evaluation Suite",
-              href: "/products/evaluation",
-              description: "Comprehensive model evaluation tools",
+              name: "Keyword Research Tool",
+              href: "/products/keyword-research",
+              description: "Discover profitable and trending keywords",
             },
             {
-              name: "Fine-tuning Tools",
-              href: "/products/fine-tuning",
-              description: "Optimize your models for specific tasks",
-            },
-          ],
-        },
-        {
-          title: "Enterprise Solutions",
-          items: [
-            {
-              name: "Custom Models",
-              href: "/enterprise/custom-models",
-              description: "Tailored AI solutions for your business",
+              name: "SEO Auditor",
+              href: "/products/seo-auditor",
+              description: "Analyze your website’s SEO health",
             },
             {
-              name: "API Integration",
-              href: "/enterprise/api",
-              description: "Seamless integration with existing systems",
+              name: "Content Rewriter / Improver",
+              href: "/products/content-rewriter",
+              description: "Refresh and enhance existing content",
             },
             {
-              name: "Security Suite",
-              href: "/enterprise/security",
-              description: "Enterprise-grade security features",
+              name: "SERP Rank Tracker",
+              href: "/products/rank-tracker",
+              description: "Monitor keyword rankings over time",
             },
             {
-              name: "Analytics Dashboard",
-              href: "/enterprise/analytics",
-              description: "Real-time insights and monitoring",
-            },
-          ],
-        },
-        {
-          title: "Government",
-          items: [
-            {
-              name: "Defense AI",
-              href: "/government/defense",
-              description: "AI solutions for defense applications",
-            },
-            {
-              name: "Intelligence Analysis",
-              href: "/government/intelligence",
-              description: "Advanced intelligence processing",
-            },
-            {
-              name: "Secure Deployment",
-              href: "/government/secure",
-              description: "Government-grade secure deployment",
-            },
-            {
-              name: "Compliance Tools",
-              href: "/government/compliance",
-              description: "Meet regulatory requirements",
+              name: "Analytics & Reporting Tool",
+              href: "/products/analytics-reporting",
+              description: "Visualize traffic and SEO KPIs",
             },
           ],
         },
@@ -95,77 +62,62 @@ export function MegaMenu({ type, onItemClick }: MegaMenuProps) {
     Solutions: {
       sections: [
         {
-          title: "By Industry",
+          title: "By Audience",
           items: [
             {
-              name: "Healthcare",
-              href: "/solutions/healthcare",
-              description: "AI solutions for healthcare providers",
+              name: "For Marketers",
+              href: "/solutions/marketers",
+              description: "Boost traffic and conversions with AI SEO",
             },
             {
-              name: "Finance",
-              href: "/solutions/finance",
-              description: "Financial services AI applications",
+              name: "For Bloggers",
+              href: "/solutions/bloggers",
+              description: "Grow your blog audience effortlessly",
             },
             {
-              name: "Automotive",
-              href: "/solutions/automotive",
-              description: "Autonomous vehicle technology",
+              name: "For SEO Agencies",
+              href: "/solutions/seo-agencies",
+              description: "Scale client results with automation",
             },
             {
-              name: "Retail",
-              href: "/solutions/retail",
-              description: "Retail optimization and personalization",
+              name: "For SaaS Startups",
+              href: "/solutions/saas",
+              description: "Product-led SEO for rapid growth",
+            },
+            {
+              name: "For eCommerce Brands",
+              href: "/solutions/ecommerce",
+              description: "Drive organic sales with optimized content",
             },
           ],
         },
         {
-          title: "By Use Case",
+          title: "Enterprise",
           items: [
             {
-              name: "Computer Vision",
-              href: "/solutions/computer-vision",
-              description: "Image and video analysis",
+              name: "White-label Options",
+              href: "/enterprise/white-label",
+              description: "Offer our tools under your brand",
             },
             {
-              name: "Natural Language",
-              href: "/solutions/nlp",
-              description: "Text processing and understanding",
+              name: "Custom API Access",
+              href: "/enterprise/api",
+              description: "Direct access to our AI engine",
             },
             {
-              name: "Predictive Analytics",
-              href: "/solutions/analytics",
-              description: "Forecast trends and outcomes",
+              name: "Dedicated Support",
+              href: "/enterprise/support",
+              description: "Priority assistance and onboarding",
             },
             {
-              name: "Automation",
-              href: "/solutions/automation",
-              description: "Intelligent process automation",
-            },
-          ],
-        },
-        {
-          title: "By Role",
-          items: [
-            {
-              name: "Data Scientists",
-              href: "/solutions/data-scientists",
-              description: "Tools for data science teams",
+              name: "Team Collaboration",
+              href: "/enterprise/team",
+              description: "Workspaces for your internal teams",
             },
             {
-              name: "ML Engineers",
-              href: "/solutions/ml-engineers",
-              description: "MLOps and deployment solutions",
-            },
-            {
-              name: "Product Teams",
-              href: "/solutions/product-teams",
-              description: "AI-powered product features",
-            },
-            {
-              name: "Executives",
-              href: "/solutions/executives",
-              description: "Strategic AI implementation",
+              name: "Volume Pricing",
+              href: "/enterprise/pricing",
+              description: "Get discounts for large-scale usage",
             },
           ],
         },
@@ -177,49 +129,24 @@ export function MegaMenu({ type, onItemClick }: MegaMenuProps) {
           title: "Learn",
           items: [
             {
-              name: "Documentation",
-              href: "/docs",
-              description: "Comprehensive API and platform docs",
-            },
-            {
-              name: "Tutorials",
-              href: "/tutorials",
-              description: "Step-by-step learning guides",
-            },
-            {
-              name: "Best Practices",
-              href: "/best-practices",
-              description: "Industry best practices and tips",
-            },
-            {
-              name: "Case Studies",
-              href: "/case-studies",
-              description: "Real-world implementation examples",
-            },
-          ],
-        },
-        {
-          title: "Community",
-          items: [
-            {
-              name: "Developer Forum",
-              href: "/community/forum",
-              description: "Connect with other developers",
-            },
-            {
-              name: "Events",
-              href: "/community/events",
-              description: "Upcoming events and conferences",
-            },
-            {
-              name: "Webinars",
-              href: "/community/webinars",
-              description: "Educational webinar series",
-            },
-            {
               name: "Blog",
               href: "/blog",
-              description: "Latest news and insights",
+              description: "AI and SEO tips from industry experts",
+            },
+            {
+              name: "SEO Academy",
+              href: "/academy",
+              description: "Master SEO with structured lessons",
+            },
+            {
+              name: "Documentation",
+              href: "/docs",
+              description: "API and feature guides",
+            },
+            {
+              name: "Webinars / Events",
+              href: "/events",
+              description: "Live sessions with SEO leaders",
             },
           ],
         },
@@ -227,30 +154,74 @@ export function MegaMenu({ type, onItemClick }: MegaMenuProps) {
           title: "Support",
           items: [
             {
-              name: "Help Center",
-              href: "/support",
-              description: "Get help and find answers",
+              name: "FAQ",
+              href: "/faq",
+              description: "Answers to common questions",
             },
             {
               name: "Contact Support",
               href: "/support/contact",
-              description: "Reach our support team",
+              description: "Need help? Talk to us",
+            },
+          ],
+        },
+      ],
+    },
+    Customers: {
+      sections: [
+        {
+          title: "Trusted by 200+ Brands",
+          items: [
+            {
+              name: "Case Studies",
+              href: "/customers/case-studies",
+              description: "See how others achieved results",
             },
             {
-              name: "Status Page",
-              href: "/status",
-              description: "System status and uptime",
+              name: "Testimonials",
+              href: "/customers/testimonials",
+              description: "Hear from our happy users",
             },
             {
-              name: "Training",
-              href: "/support/training",
-              description: "Professional training services",
+              name: "Logo Showcase",
+              href: "/customers/logos",
+              description: "Our growing customer base",
+            },
+          ],
+        },
+      ],
+    },
+    Pricing: {
+      sections: [
+        {
+          title: "Plans & Features",
+          items: [
+            {
+              name: "Free Plan",
+              href: "/pricing/free",
+              description: "Get started at zero cost",
+            },
+            {
+              name: "Starter, Pro, Agency",
+              href: "/pricing/tiers",
+              description: "Choose the plan that fits your growth",
+            },
+            {
+              name: "Comparison Table",
+              href: "/pricing/comparison",
+              description: "Compare features by plan",
+            },
+            {
+              name: "Feature Breakdown",
+              href: "/pricing/features",
+              description: "See what each plan includes",
             },
           ],
         },
       ],
     },
   };
+
 
   const content = menuContent[type as keyof typeof menuContent];
   const allItems = content.sections.flatMap((section) => section.items);
@@ -330,7 +301,8 @@ export function MegaMenu({ type, onItemClick }: MegaMenuProps) {
                       .reduce((acc, s) => acc + s.items.length, 0) + itemIndex;
 
                   return (
-                    <li key={item.name}>
+                      <li key={item.name}>
+                      <Link href={item.href}>
                       <button
                         onClick={() => handleItemClick(item.href)}
                         onMouseEnter={() => setFocusedIndex(globalIndex)}
@@ -347,6 +319,7 @@ export function MegaMenu({ type, onItemClick }: MegaMenuProps) {
                           {item.description}
                         </div>
                       </button>
+                      </Link>
                     </li>
                   );
                 })}
