@@ -1,4 +1,5 @@
 import DotBackground from "@/components/ui/dot-background";
+import { FeaturesSection } from "@/components/ui/landing/features-section";
 import { HeroSection } from "@/components/ui/landing/hero-section";
 import { Metadata } from "next";
 
@@ -18,6 +19,8 @@ export default function Home() {
           </h1>
         </div>
       </DotBackground>
+
+      <FeaturesSection/>
 
        
     </>

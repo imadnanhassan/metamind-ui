@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
 
+import { useState, useEffect, useRef } from "react";
 import { motion } from "motion/react";
 import { AnimatedHamburger } from "../animated-hamburger";
 import { MegaMenu } from "../mega-menu";

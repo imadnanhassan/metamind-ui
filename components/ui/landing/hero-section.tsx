@@ -34,13 +34,13 @@ export function HeroSection() {
               <div className="glass-card flex items-center space-x-2 px-6 py-3 rounded-full text-sm font-medium border border-gray-800/50">
                 <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
                 <Sparkles className="w-4 h-4 text-green-600" />
-                <span className="gradient-text font-semibold text-white">
+                <span className="gradient-text font-semibold text-white font-heading">
                   AI-Powered SEO Revolution
                 </span>
               </div>
             </div>
 
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight !font-heading">
               Transform Your SEO with
               <br />
               <span className="relative">
