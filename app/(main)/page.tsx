@@ -1,28 +1,25 @@
+import DotBackground from "@/components/ui/dot-background";
+import { HeroSection } from "@/components/ui/landing/hero-section";
 import { Metadata } from "next";
-import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Home - Tennis Club",
+  title: "Home - MetaMind",
 };
 
 export default function Home() {
   return (
-    <div className="text-center">
-      <h1 className="text-3xl font-bold text-blue-600">
-        Welcome to the Tennis Club
-      </h1>
-      <p className="text-gray-700 mt-4">
-        Join our club and enjoy the best tennis experience.
-      </p>
-      <div className="mt-8">
-        <Image
-          src="https://images.pexels.com/photos/1277397/pexels-photo-1277397.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-          alt="Tennis Court"
-          width={600}
-          height={400}
-          className="rounded-lg shadow-lg mx-auto"
-        />
-      </div>
-    </div>
+    <>
+      <HeroSection />
+
+      <DotBackground className="bg-black">
+        <div className="relative z-10 max-w-[1400px] mx-auto px-6 py-20">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
+            Transform Your SEO with
+          </h1>
+        </div>
+      </DotBackground>
+
+       
+    </>
   );
 }
