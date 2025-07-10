@@ -71,9 +71,9 @@ export function FeaturesSection() {
                 transition={{ duration: 0.8, delay: index * 0.2 }}
                 whileHover={{ y: -5 }}
               >
-                <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
-                <h3 className="text-xl font-semibold mb-3 text-white">{feature.title}</h3>
-                <p className="text-gray-400">{feature.description}</p>
+                <feature.icon className="w-12 h-12 text-purple-400 mb-4 !z-20" />
+                <h3 className="text-xl font-semibold mb-3 text-white !z-20">{feature.title}</h3>
+                <p className="text-gray-400 !z-20">{feature.description}</p>
               </motion.div>
             </CardSpotlight>
           ))}
